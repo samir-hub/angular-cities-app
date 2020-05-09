@@ -24,12 +24,12 @@
   <div style="margin: 10px;">
     <div style="display: flex; align-items: center;">
       <div style="display: flex; flex-direction: column;">
-      <h1>{{ summary }}</h1>
+      <h1 style="margin-right: 5px;">{{ summary }}</h1>
       <h1 *ngIf="teleport_city_score">
-        Overall Score: {{ teleport_city_score }}
+        Overall Score: {{ teleport_city_score }} / 100
       </h1>
     </div>
-      <img style="width: 35%;" src="{{ mobileImage }}" />
+      <img style="width: 37%;" src="{{ mobileImage }}" />
     </div>
 
     <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">

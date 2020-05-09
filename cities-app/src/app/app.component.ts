@@ -27,7 +27,7 @@ export class AppComponent {
       {
         this.listQOLData = data.categories; 
         this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
-        this.teleport_city_score = data.teleport_city_score; 
+        this.teleport_city_score = data.teleport_city_score.toFixed(2); 
       }
     )
     this._imageService.getAustinImages()
@@ -49,7 +49,7 @@ export class AppComponent {
       {
         this.listQOLData = data.categories; 
         this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
-        this.teleport_city_score = data.teleport_city_score;
+        this.teleport_city_score = data.teleport_city_score.toFixed(2);
       }
     )
     this._imageService.getNYImages()
@@ -71,7 +71,7 @@ export class AppComponent {
       {
         this.listQOLData = data.categories; 
         this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
-        this.teleport_city_score = data.teleport_city_score;
+        this.teleport_city_score = data.teleport_city_score.toFixed(2);
       }
     )
     this._imageService.getChicagoImages()
@@ -93,7 +93,7 @@ export class AppComponent {
       {
         this.listQOLData = data.categories; 
         this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
-        this.teleport_city_score = data.teleport_city_score;
+        this.teleport_city_score = data.teleport_city_score.toFixed(2);
       }
     )
     this._imageService.getLAImages()
@@ -115,7 +115,7 @@ export class AppComponent {
       {
         this.listQOLData = data.categories; 
         this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
-        this.teleport_city_score = data.teleport_city_score;
+        this.teleport_city_score = data.teleport_city_score.toFixed(2);
       }
     )
     this._imageService.getHoustonImages()
@@ -137,7 +137,7 @@ export class AppComponent {
       {
         this.listQOLData = data.categories; 
         this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
-        this.teleport_city_score = data.teleport_city_score;
+        this.teleport_city_score = data.teleport_city_score.toFixed(2);
       }
     )
     this._imageService.getSeattleImages()
@@ -159,7 +159,7 @@ export class AppComponent {
       {
         this.listQOLData = data.categories; 
         this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
-        this.teleport_city_score = data.teleport_city_score;
+        this.teleport_city_score = data.teleport_city_score.toFixed(2);
       }
     )
     this._imageService.getDCImages()
@@ -181,7 +181,7 @@ export class AppComponent {
       {
         this.listQOLData = data.categories; 
         this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
-        this.teleport_city_score = data.teleport_city_score;
+        this.teleport_city_score = data.teleport_city_score.toFixed(2);
       }
     )
     this._imageService.getAtlantaImages()
