@@ -1,22 +1,50 @@
 <div>
-<h1 style="text-align: center;">City Explorer</h1>
-<div style="display: flex; justify-content: space-evenly;">
-<button mat-raised-button (click)="onClickAustin()">Austin, TX</button>
-<button mat-raised-button (click)="onClickNewYork()">New York, NY</button>
-<button mat-raised-button (click)="onClickSeattle()">Seattle, WA</button>
-<button mat-raised-button (click)="onClickHouston()">Houston, TX</button>
-<button mat-raised-button (click)="onClickDC()">Washington DC</button>
-<button mat-raised-button (click)="onClickChicago()">Chicago, IL</button>
-<button mat-raised-button (click)="onClickAtlanta()">Atlanta, GA</button>
-<button mat-raised-button (click)="onClickLA()">Los Angeles, CA</button>
-</div>
-<div *ngIf="!summary" style="background-image: url(../assets/home_landscape.jpg); height: 83vh; background-size: cover; background-position: center;"></div>
-<h1>{{summary}}</h1>
-<h3 *ngIf="teleport_city_score">Overall Score: {{teleport_city_score}}</h3>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
-  <mat-card style="width: 21%; padding: 20px; border: 1px solid black; margin: 10px 0; text-align: center;" *ngFor="let data of listQOLData">
-    <mat-card-title>{{ data.name }}</mat-card-title>
-    <mat-card-content>Score: {{ data.score_out_of_10 }} / 10</mat-card-content>
-  </mat-card>
-</div>
+  <h1 style="text-align: center;">City Explorer</h1>
+  <div
+    style="display: flex; justify-content: space-evenly; margin-bottom: 10px;"
+  >
+    <button mat-raised-button (click)="onClickAustin()">Austin, TX</button>
+    <button mat-raised-button (click)="onClickNewYork()">New York, NY</button>
+    <button mat-raised-button (click)="onClickSeattle()">Seattle, WA</button>
+    <button mat-raised-button (click)="onClickHouston()">Houston, TX</button>
+    <button mat-raised-button (click)="onClickDC()">Washington DC</button>
+    <button mat-raised-button (click)="onClickChicago()">Chicago, IL</button>
+    <button mat-raised-button (click)="onClickAtlanta()">Atlanta, GA</button>
+    <button mat-raised-button (click)="onClickLA()">Los Angeles, CA</button>
+  </div>
+  <div
+    *ngIf="!summary"
+    style="
+      background-image: url(../assets/home_landscape.jpg);
+      height: 83vh;
+      background-size: cover;
+      background-position: center;
+    "
+  ></div>
+  <div style="margin: 10px;">
+    <div>
+      <h1>{{ summary }}</h1>
+      <img src="{{ mobileImage }}" />
+    </div>
+    <h3 *ngIf="teleport_city_score">
+      Overall Score: {{ teleport_city_score }}
+    </h3>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+      <mat-card
+        style="
+          width: 21%;
+          padding: 20px;
+          border: 1px solid black;
+          margin: 10px 0;
+          text-align: center;
+        "
+        *ngFor="let data of listQOLData"
+      >
+        <mat-card-title>{{ data.name }}</mat-card-title>
+        <mat-card-content
+          >Score: {{ data.score_out_of_10 }} / 10</mat-card-content
+        >
+      </mat-card>
+    </div>
+  </div>
 </div>

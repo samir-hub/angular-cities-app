@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { qolService } from './services/qol.service'; 
 import { QOLCities } from './classes/citiesqol'; 
+import { imageService } from './services/image.service'; 
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,14 @@ import { QOLCities } from './classes/citiesqol';
 })
 export class AppComponent {
   
-  constructor(private _qolService: qolService){
+  constructor(private _qolService: qolService, private _imageService: imageService){
   }
 
   listQOLData: QOLCities[]; 
   summary: string; 
   teleport_city_score: number; 
+  mobileImage: string; 
+  webImage: string; 
 
   onClickAustin(){
     this._qolService.getqolAustin()
@@ -25,6 +28,15 @@ export class AppComponent {
         this.listQOLData = data.categories; 
         this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
         this.teleport_city_score = data.teleport_city_score; 
+      }
+    )
+    this._imageService.getAustinImages()
+    .subscribe
+    (
+      data=> 
+      {
+        this.mobileImage = data.photos[0].image.mobile; 
+        this.webImage = data.photos[0].image.web; 
       }
     )
   }

@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { qolService } from './services/qol.service';
+import { imageService } from './services/image.service'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatCardModule,
     MatButtonModule
   ],
-  providers: [qolService],
+  providers: [qolService, imageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
