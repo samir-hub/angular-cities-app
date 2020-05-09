@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { qolService } from './services/qol.service'; 
+import { QOLCities } from './classes/citiesqol'; 
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cities-app';
+  
+  constructor(private _qolService: qolService){
+  }
+
+  listQOLData: QOLCities[]; 
+
+  ngOnInit(){
+    this._qolService.getqolCities()
+    .subscribe
+    (
+      data=>
+      {
+        this.listQOLData = data.categories; 
+      }
+    )
+  }
+
+
 }
