@@ -13,6 +13,8 @@ export class AppComponent {
   }
 
   listQOLData: QOLCities[]; 
+  summary: string; 
+  teleport_city_score: number; 
 
   onClickAustin(){
     this._qolService.getqolAustin()
@@ -21,6 +23,8 @@ export class AppComponent {
       data=>
       {
         this.listQOLData = data.categories; 
+        this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
+        this.teleport_city_score = data.teleport_city_score; 
       }
     )
   }
@@ -32,6 +36,8 @@ export class AppComponent {
       data=>
       {
         this.listQOLData = data.categories; 
+        this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
+        this.teleport_city_score = data.teleport_city_score;
       }
     )
   }
@@ -43,6 +49,8 @@ export class AppComponent {
       data=>
       {
         this.listQOLData = data.categories; 
+        this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
+        this.teleport_city_score = data.teleport_city_score;
       }
     )
   }
@@ -54,6 +62,8 @@ export class AppComponent {
       data=>
       {
         this.listQOLData = data.categories; 
+        this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
+        this.teleport_city_score = data.teleport_city_score;
       }
     )
   }
@@ -65,6 +75,8 @@ export class AppComponent {
       data=>
       {
         this.listQOLData = data.categories; 
+        this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
+        this.teleport_city_score = data.teleport_city_score;
       }
     )
   }
@@ -76,6 +88,8 @@ export class AppComponent {
       data=>
       {
         this.listQOLData = data.categories; 
+        this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
+        this.teleport_city_score = data.teleport_city_score;
       }
     )
   }
@@ -87,6 +101,8 @@ export class AppComponent {
       data=>
       {
         this.listQOLData = data.categories; 
+        this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
+        this.teleport_city_score = data.teleport_city_score;
       }
     )
   }
@@ -98,6 +114,8 @@ export class AppComponent {
       data=>
       {
         this.listQOLData = data.categories; 
+        this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
+        this.teleport_city_score = data.teleport_city_score;
       }
     )
   }

@@ -7,6 +7,8 @@
 <button (click)="onClickChicago()">Chicago, IL</button>
 <button (click)="onClickAtlanta()">Atlanta, GA</button>
 <button (click)="onClickLA()">Los Angeles, CA</button>
+<h1>{{summary}}</h1>
+<h3 *ngIf="teleport_city_score">Overall Score: {{teleport_city_score}}</h3>
 <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
   <div style="width: 10%; padding: 20px; border: 1px solid black; margin: 10px 0;" *ngFor="let data of listQOLData">
     <span>{{ data.name }}: </span>
