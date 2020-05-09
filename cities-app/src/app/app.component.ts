@@ -52,6 +52,15 @@ export class AppComponent {
         this.teleport_city_score = data.teleport_city_score;
       }
     )
+    this._imageService.getNYImages()
+    .subscribe
+    (
+      data=> 
+      {
+        this.mobileImage = data.photos[0].image.mobile; 
+        this.webImage = data.photos[0].image.web; 
+      }
+    )
   }
 
   onClickChicago(){
@@ -63,6 +72,15 @@ export class AppComponent {
         this.listQOLData = data.categories; 
         this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
         this.teleport_city_score = data.teleport_city_score;
+      }
+    )
+    this._imageService.getChicagoImages()
+    .subscribe
+    (
+      data=> 
+      {
+        this.mobileImage = data.photos[0].image.mobile; 
+        this.webImage = data.photos[0].image.web; 
       }
     )
   }
@@ -78,6 +96,15 @@ export class AppComponent {
         this.teleport_city_score = data.teleport_city_score;
       }
     )
+    this._imageService.getLAImages()
+    .subscribe
+    (
+      data=> 
+      {
+        this.mobileImage = data.photos[0].image.mobile; 
+        this.webImage = data.photos[0].image.web; 
+      }
+    )
   }
 
   onClickHouston(){
@@ -89,6 +116,15 @@ export class AppComponent {
         this.listQOLData = data.categories; 
         this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
         this.teleport_city_score = data.teleport_city_score;
+      }
+    )
+    this._imageService.getHoustonImages()
+    .subscribe
+    (
+      data=> 
+      {
+        this.mobileImage = data.photos[0].image.mobile; 
+        this.webImage = data.photos[0].image.web; 
       }
     )
   }
@@ -104,6 +140,15 @@ export class AppComponent {
         this.teleport_city_score = data.teleport_city_score;
       }
     )
+    this._imageService.getSeattleImages()
+    .subscribe
+    (
+      data=> 
+      {
+        this.mobileImage = data.photos[0].image.mobile; 
+        this.webImage = data.photos[0].image.web; 
+      }
+    )
   }
 
   onClickDC(){
@@ -117,6 +162,15 @@ export class AppComponent {
         this.teleport_city_score = data.teleport_city_score;
       }
     )
+    this._imageService.getDCImages()
+    .subscribe
+    (
+      data=> 
+      {
+        this.mobileImage = data.photos[0].image.mobile; 
+        this.webImage = data.photos[0].image.web; 
+      }
+    )
   }
 
   onClickAtlanta(){
@@ -128,6 +182,15 @@ export class AppComponent {
         this.listQOLData = data.categories; 
         this.summary = data.summary.replace(/<p>/g, '').replace(/<b>/g, '').replace(/<\/p>/g, '').replace(/<\/b>/g, '');
         this.teleport_city_score = data.teleport_city_score;
+      }
+    )
+    this._imageService.getAtlantaImages()
+    .subscribe
+    (
+      data=> 
+      {
+        this.mobileImage = data.photos[0].image.mobile; 
+        this.webImage = data.photos[0].image.web; 
       }
     )
   }

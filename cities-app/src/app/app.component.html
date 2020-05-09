@@ -22,13 +22,16 @@
     "
   ></div>
   <div style="margin: 10px;">
-    <div>
+    <div style="display: flex; align-items: center;">
+      <div style="display: flex; flex-direction: column;">
       <h1>{{ summary }}</h1>
-      <img src="{{ mobileImage }}" />
+      <h1 *ngIf="teleport_city_score">
+        Overall Score: {{ teleport_city_score }}
+      </h1>
     </div>
-    <h3 *ngIf="teleport_city_score">
-      Overall Score: {{ teleport_city_score }}
-    </h3>
+      <img style="width: 35%;" src="{{ mobileImage }}" />
+    </div>
+
     <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
       <mat-card
         style="
