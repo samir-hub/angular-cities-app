@@ -1,7 +1,15 @@
-<h1>City Data for New York</h1>
-<div *ngFor="let data; for: listQOLData">
-  <h3>Category:</h3>
-  <span>{{ data.name }}</span>
-  <h3>Score:</h3>
-  <span>{{ data.score_out_of_10 }}</span>
+<h1>City Data</h1>
+<button (click)="onClickAustin()">Austin, TX</button>
+<button (click)="onClickNewYork()">New York, NY</button>
+<button (click)="onClickSeattle()">Seattle, WA</button>
+<button (click)="onClickHouston()">Houston, TX</button>
+<button (click)="onClickDC()">Washington DC</button>
+<button (click)="onClickChicago()">Chicago, IL</button>
+<button (click)="onClickAtlanta()">Atlanta, GA</button>
+<button (click)="onClickLA()">Los Angeles, CA</button>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+  <div style="width: 10%; padding: 20px; border: 1px solid black; margin: 10px 0;" *ngFor="let data of listQOLData">
+    <span>{{ data.name }}: </span>
+    <span>{{ data.score_out_of_10 }}</span>
+  </div>
 </div>

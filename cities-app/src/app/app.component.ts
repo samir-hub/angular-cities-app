@@ -14,7 +14,18 @@ export class AppComponent {
 
   listQOLData: QOLCities[]; 
 
-  ngOnInit(){
+  onClickAustin(){
+    this._qolService.getqolAustin()
+    .subscribe
+    (
+      data=>
+      {
+        this.listQOLData = data.categories; 
+      }
+    )
+  }
+
+  onClickNewYork(){
     this._qolService.getqolCities()
     .subscribe
     (
@@ -25,5 +36,70 @@ export class AppComponent {
     )
   }
 
+  onClickChicago(){
+    this._qolService.getqolChicago()
+    .subscribe
+    (
+      data=>
+      {
+        this.listQOLData = data.categories; 
+      }
+    )
+  }
+
+  onClickLA(){
+    this._qolService.getqolLA()
+    .subscribe
+    (
+      data=>
+      {
+        this.listQOLData = data.categories; 
+      }
+    )
+  }
+
+  onClickHouston(){
+    this._qolService.getqolHouston()
+    .subscribe
+    (
+      data=>
+      {
+        this.listQOLData = data.categories; 
+      }
+    )
+  }
+
+  onClickSeattle(){
+    this._qolService.getqolSeattle()
+    .subscribe
+    (
+      data=>
+      {
+        this.listQOLData = data.categories; 
+      }
+    )
+  }
+
+  onClickDC(){
+    this._qolService.getqolDC()
+    .subscribe
+    (
+      data=>
+      {
+        this.listQOLData = data.categories; 
+      }
+    )
+  }
+
+  onClickAtlanta(){
+    this._qolService.getqolAtlanta()
+    .subscribe
+    (
+      data=>
+      {
+        this.listQOLData = data.categories; 
+      }
+    )
+  }
 
 }
