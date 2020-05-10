@@ -1,6 +1,6 @@
 <div>
   <h1 style="text-align: center;">City Explorer</h1>
-  <div
+  <!-- <div
     style="display: flex; justify-content: space-evenly; margin-bottom: 10px;"
   >
     <button mat-raised-button (click)="onClickAustin()">Austin, TX</button>
@@ -11,6 +11,17 @@
     <button mat-raised-button (click)="onClickChicago()">Chicago, IL</button>
     <button mat-raised-button (click)="onClickAtlanta()">Atlanta, GA</button>
     <button mat-raised-button (click)="onClickLA()">Los Angeles, CA</button>
+  </div> -->
+  <div
+    style="display: flex; justify-content: space-evenly; margin-bottom: 10px;"
+  >
+    <button
+      *ngFor="let city of listCities"
+      mat-raised-button
+      (click)="onClick(city.name)"
+    >
+      {{ city.name }}
+    </button>
   </div>
   <div
     *ngIf="!summary"
@@ -24,11 +35,11 @@
   <div style="margin: 10px;">
     <div style="display: flex; align-items: center;">
       <div style="display: flex; flex-direction: column;">
-      <h1 style="margin-right: 5px;">{{ summary }}</h1>
-      <h1 *ngIf="teleport_city_score">
-        Overall Score: {{ teleport_city_score }} / 100
-      </h1>
-    </div>
+        <h1 style="margin-right: 5px;">{{ summary }}</h1>
+        <h1 *ngIf="teleport_city_score">
+          Overall Score: {{ teleport_city_score }} / 100
+        </h1>
+      </div>
       <img style="width: 37%;" src="{{ mobileImage }}" />
     </div>
 

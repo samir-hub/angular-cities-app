@@ -2,35 +2,35 @@
     "cities": [
       {
         "id": 1,
-        "name": "Austin, TX"
+        "name": "austin"
       },
       {
         "id": 2,
-        "name": "New York, NY"
+        "name": "new-york"
       },
       {
         "id": 3,
-        "name": "Seattle, WA"
+        "name": "seattle"
       },
       {
         "id": 4,
-        "name": "Houston, TX"
+        "name": "houston"
       },
       {
         "id": 5,
-        "name": "Washington DC"
+        "name": "washington-dc"
       },
       {
         "id": 6,
-        "name": "Chicago, IL"
+        "name": "chicago"
       },
       {
         "id": 7,
-        "name": "Atlanta, GA"
+        "name": "atlanta"
       },
       {
         "id": 8,
-        "name": "Los Angeles, LA"
+        "name": "los-angeles"
       }
     ]
   }

@@ -6,6 +6,12 @@ import { HttpClient } from "@angular/common/http";
 export class imageService {
   constructor(private httpclient: HttpClient) {}
 
+  getImages(city: string): Observable<any> {
+    return this.httpclient.get(
+      `https://api.teleport.org/api/urban_areas/slug:${city}/images/`
+    );
+  }
+
   getNYImages(): Observable<any> {
     return this.httpclient.get(
       "https://api.teleport.org/api/urban_areas/slug:new-york/images/"
