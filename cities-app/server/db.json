@@ -1,0 +1,37 @@
+{
+    "cities": [
+      {
+        "id": 1,
+        "name": "Austin, TX"
+      },
+      {
+        "id": 2,
+        "name": "New York, NY"
+      },
+      {
+        "id": 3,
+        "name": "Seattle, WA"
+      },
+      {
+        "id": 4,
+        "name": "Houston, TX"
+      },
+      {
+        "id": 5,
+        "name": "Washington DC"
+      },
+      {
+        "id": 6,
+        "name": "Chicago, IL"
+      },
+      {
+        "id": 7,
+        "name": "Atlanta, GA"
+      },
+      {
+        "id": 8,
+        "name": "Los Angeles, LA"
+      }
+    ]
+  }
+  

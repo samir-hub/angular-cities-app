@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { qolService } from './services/qol.service'; 
 import { QOLCities } from './classes/citiesqol'; 
+import { Cities } from './classes/cities';
 import { imageService } from './services/image.service'; 
 
 @Component({
@@ -14,6 +15,7 @@ export class AppComponent {
   }
 
   listQOLData: QOLCities[]; 
+  listCities: Cities[]; 
   summary: string; 
   teleport_city_score: number; 
   mobileImage: string; 
