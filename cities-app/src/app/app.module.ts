@@ -13,13 +13,15 @@ import { imageService } from './services/image.service';
 import { cityService } from './services/city.service'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CitiesListComponent } from './cities/cities-list/cities-list.component';
-import { CityComponent } from './cities/city/city/city.component'; 
+import { CityComponent } from './cities/city/city.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CitiesListComponent,
-    CityComponent
+    CityComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
