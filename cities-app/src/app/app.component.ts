@@ -1,4 +1,4 @@
-import { Component, Input, SimpleChanges } from "@angular/core";
+import { Component } from "@angular/core";
 import { qolService } from "./services/qol.service";
 import { QOLCities } from "./classes/citiesqol";
 import { Cities } from "./classes/cities";
@@ -32,6 +32,10 @@ export class AppComponent {
   }
 
   onClick(city: string) {
+    let lowerCase = city.toLowerCase(); 
+    let splitCity = lowerCase.split(" ");
+    
+    console.log(splitCity)
     this.cityToDisplay = city;
     this._qolService.getqolCity(this.cityToDisplay).subscribe((data) => {
       this.listQOLData = data.categories;
