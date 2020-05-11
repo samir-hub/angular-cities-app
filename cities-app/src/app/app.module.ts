@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -31,6 +32,7 @@ import { HomeComponent } from './home/home.component';
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
+    MatListModule,
     AppRoutingModule
   ],
   providers: [qolService, imageService, cityService],
