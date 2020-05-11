@@ -25,7 +25,10 @@ export class CitiesFormComponent implements OnInit {
 
   onSubmit(cityData) {
     // Process checkout data here
-    console.warn('Your order has been submitted', cityData);
-    this._cityService.addCity(cityData)
+    this._cityService.addCity(cityData).subscribe(
+      data => {
+        console.log(data)
+      }
+    )
   }
 }

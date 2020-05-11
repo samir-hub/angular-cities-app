@@ -1,49 +1,52 @@
 {
-    "cities": [
-      {
-        "id": 1,
-        "name": "Austin"
-      },
-      {
-        "id": 2,
-        "name": "New York"
-      },
-      {
-        "id": 3,
-        "name": "Seattle"
-      },
-      {
-        "id": 4,
-        "name": "Houston"
-      },
-      {
-        "id": 5,
-        "name": "Washington DC"
-      },
-      {
-        "id": 6,
-        "name": "Chicago"
-      },
-      {
-        "id": 7,
-        "name": "Atlanta"
-      },
-      {
-        "id": 8,
-        "name": "Los Angeles"
-      },
-      {
-        "id": 9,
-        "name": "Raleigh"
-      },
-      {
-        "id": 10,
-        "name": "Boston"
-      },
-      {
-        "id": 11,
-        "name": "Miami"
-      }
-    ]
-  }
-  
+  "cities": [
+    {
+      "id": 1,
+      "name": "Austin"
+    },
+    {
+      "id": 2,
+      "name": "New York"
+    },
+    {
+      "id": 3,
+      "name": "Seattle"
+    },
+    {
+      "id": 4,
+      "name": "Houston"
+    },
+    {
+      "id": 5,
+      "name": "Washington DC"
+    },
+    {
+      "id": 6,
+      "name": "Chicago"
+    },
+    {
+      "id": 7,
+      "name": "Atlanta"
+    },
+    {
+      "id": 8,
+      "name": "Los Angeles"
+    },
+    {
+      "id": 9,
+      "name": "Raleigh"
+    },
+    {
+      "id": 10,
+      "name": "Boston"
+    },
+    {
+      "id": 11,
+      "name": "Miami"
+    },
+    {
+      "id": 12,
+      "name": "Dallas"
+    }
+  ]
+}

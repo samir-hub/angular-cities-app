@@ -1,6 +1,12 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+};
 
 @Injectable()
 export class cityService {
@@ -15,6 +21,7 @@ export class cityService {
   }
 
   addCity(city): Observable<any> {
-    return this.httpclient.post("http://localhost:3000/cities/", city);
+    console.log(city)
+    return this.httpclient.post("http://localhost:3000/cities/", city, httpOptions);
   }
 }
