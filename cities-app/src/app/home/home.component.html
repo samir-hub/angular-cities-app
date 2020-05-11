@@ -17,32 +17,4 @@
     </div>
     <img style="width: 300px; margin-bottom: 15px; border-radius: 10px;" src="../assets/home_car.svg" />
   </div>
-  <div style="margin: 10px;">
-    <div style="display: flex; align-items: center;">
-      <div style="display: flex; flex-direction: column;">
-        <h1 style="margin-right: 5px;">{{ summary }}</h1>
-        <h1 *ngIf="teleport_city_score">
-          Overall Score: {{ teleport_city_score }} / 100
-        </h1>
-      </div>
-      <img style="width: 37%;" src="{{ mobileImage }}" />
-    </div>
-
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
-      <mat-card
-        style="
-          width: 21%;
-          padding: 20px;
-          border: 1px solid black;
-          margin: 10px 0;
-          text-align: center;
-        "
-        *ngFor="let data of listQOLData"
-      >
-        <mat-card-title>{{ data.name }}</mat-card-title>
-        <mat-card-content
-          >Score: {{ data.score_out_of_10 }} / 10</mat-card-content
-        >
-      </mat-card>
-    </div>
-  </div>
+  
