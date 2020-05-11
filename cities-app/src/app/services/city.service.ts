@@ -11,4 +11,10 @@ export class cityService {
           "http://localhost:3000/cities/"
         );
       }
+
+    getCityById(id: string): Observable<any> {
+      return this.httpclient.get(
+        `http://localhost:3000/cities/${id}`
+      )
+    }  
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { qolService } from "../services/qol.service";
 import { QOLCities } from "../classes/citiesqol";
 import { Cities } from "../classes/cities";
@@ -15,7 +16,8 @@ export class HomeComponent {
   constructor(
     private _qolService: qolService,
     private _imageService: imageService,
-    private _cityService: cityService
+    private _cityService: cityService,
+    public router: Router
   ) {}
 
   listQOLData: QOLCities[];
