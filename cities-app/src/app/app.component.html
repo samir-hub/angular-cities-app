@@ -1,25 +1,25 @@
 <div>
-  <h1 style="text-align: center;">City Explorer</h1>
-  <div
-    style="display: flex; justify-content: space-evenly; margin-bottom: 10px;"
-  >
-    <button
-      *ngFor="let city of listCities"
-      mat-raised-button
-      (click)="onClick(city.name)"
+  <mat-toolbar color="primary">
+    <span>
+      City Explorer
+    </span>
+  </mat-toolbar>
+  <div style="height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: space-between;">
+    <h2 style="width: 30%;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h2>
+    <div
+      style="display: flex; justify-content: space-evenly; margin-bottom: 10px; width: 100%;"
     >
-      {{ city.name }}
-    </button>
+      <button
+      style="font-size: 20px;"
+        *ngFor="let city of listCities"
+        mat-raised-button
+        (click)="onClick(city.name)"
+      >
+        {{ city.name }}
+      </button>
+    </div>
+    <img style="width: 300px; margin-bottom: 15px; border-radius: 10px;" src="../assets/home_car.svg" />
   </div>
-  <div
-    *ngIf="!summary"
-    style="
-      background-image: url(../assets/home_landscape.jpg);
-      height: 83vh;
-      background-size: cover;
-      background-position: center;
-    "
-  ></div>
   <div style="margin: 10px;">
     <div style="display: flex; align-items: center;">
       <div style="display: flex; flex-direction: column;">

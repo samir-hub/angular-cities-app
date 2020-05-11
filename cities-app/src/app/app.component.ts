@@ -32,11 +32,13 @@ export class AppComponent {
   }
 
   onClick(city: string) {
-    let lowerCase = city.toLowerCase(); 
+    let lowerCase = city.toLowerCase();
     let splitCity = lowerCase.split(" ");
-    
-    console.log(splitCity)
-    this.cityToDisplay = city;
+    if (splitCity.length > 1) {
+      this.cityToDisplay = `${splitCity[0]}-${splitCity[1]}`;
+    } else {
+      this.cityToDisplay = splitCity[0];
+    }
     this._qolService.getqolCity(this.cityToDisplay).subscribe((data) => {
       this.listQOLData = data.categories;
       this.summary = data.summary
