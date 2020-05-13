@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { MatInputModule } from '@angular/material/input';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -36,6 +37,7 @@ import { CitiesFormComponent } from './cities/cities-form/cities-form.component'
     MatButtonModule,
     MatToolbarModule,
     MatListModule,
+    MatInputModule,
     AppRoutingModule,
     ReactiveFormsModule
   ],
