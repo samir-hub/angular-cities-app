@@ -13,8 +13,7 @@ export class CitiesListComponent implements OnInit {
     private _cityService: cityService,
     private formBuilder: FormBuilder
   ) {this.cityForm = this.formBuilder.group({
-    id: "",
-    name: "",
+    name: ""
   });}
 
   listCities: Cities[];
@@ -28,6 +27,8 @@ export class CitiesListComponent implements OnInit {
 
   onSubmit(cityData) {
     // Process checkout data here
+    let newId = this.listCities[this.listCities.length-1].id + 1; 
+    cityData.id = newId;
     this._cityService.addCity(cityData).subscribe(
       data => {
         this.listCities.push(data); 
