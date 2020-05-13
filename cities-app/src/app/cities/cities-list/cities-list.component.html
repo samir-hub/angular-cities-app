@@ -1,6 +1,22 @@
 <div>
-  <app-cities-form></app-cities-form>
+  <form [formGroup]="cityForm" (ngSubmit)="onSubmit(cityForm.value)">
+    <div>
+      <label for="id">
+        ID
+      </label>
+      <input id="id" type="number" formControlName="id" />
+    </div>
+
+    <div>
+      <label for="name">
+        Name
+      </label>
+      <input id="name" type="text" formControlName="name" />
+    </div>
+
+    <button class="button" type="submit">Add City</button>
+  </form>
   <mat-list *ngFor="let city of listCities">
-    <mat-list-item> {{city.name}} </mat-list-item>
+    <mat-list-item> {{ city.name }} </mat-list-item>
   </mat-list>
 </div>
