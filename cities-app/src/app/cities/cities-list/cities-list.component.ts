@@ -37,7 +37,11 @@ export class CitiesListComponent implements OnInit {
   }
 
   onDelete(city){
-    console.log(city)
+    this._cityService.deleteCity(city.id).subscribe(
+      () => {
+        this.listCities = this.listCities.filter(myCity => myCity.id != city.id)
+      }
+    )
   }
 
   onEdit(city){
