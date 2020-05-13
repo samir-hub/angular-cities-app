@@ -35,4 +35,12 @@ export class CitiesListComponent implements OnInit {
       }
     )
   }
+
+  onDelete(city){
+    console.log(city)
+  }
+
+  onEdit(city){
+    console.log(city)
+  }
 }

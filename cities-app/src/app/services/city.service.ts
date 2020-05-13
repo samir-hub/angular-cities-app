@@ -21,7 +21,10 @@ export class cityService {
   }
 
   addCity(city): Observable<any> {
-    console.log(city)
     return this.httpclient.post("http://localhost:3000/cities/", city, httpOptions);
+  }
+
+  deleteCity(id: number): Observable<any> {
+    return this.httpclient.delete(`http://localhost:3000/cities/${id}`)
   }
 }

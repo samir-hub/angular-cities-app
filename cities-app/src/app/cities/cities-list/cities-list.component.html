@@ -1,25 +1,33 @@
 <div>
-  <form [formGroup]="cityForm" (ngSubmit)="onSubmit(cityForm.value)">
+  <form style="display: flex; justify-content: center; align-items: center; margin: 10px;" [formGroup]="cityForm" (ngSubmit)="onSubmit(cityForm.value)">
     <mat-form-field class="example-full-width">
       <mat-label>City Name</mat-label>
-      <input id="name" type="text" formControlName="name" matInput placeholder="New York">
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        matInput
+        placeholder="New York"
+      />
     </mat-form-field>
 
-    <button mat-flat-button color="accent" class="button" type="submit">Add City</button>
+    <button style="margin-left: 5px;" mat-flat-button color="accent" class="button" type="submit">
+      Add City
+    </button>
   </form>
-  <mat-list *ngFor="let city of listCities">
-    <mat-card class="example-card">
+  <mat-list style="display: flex; justify-content: center; flex-wrap: wrap;">
+    <mat-card
+      *ngFor="let city of listCities"
+      style="width: 20%; margin: 20px; background-color: #B0A8B9;"
+      class="example-card"
+    >
       <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>{{city.name}}</mat-card-title>
+        <mat-card-title style="font-size: 25px;">{{ city.name }}</mat-card-title>
       </mat-card-header>
       <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
+        <button (click)="onDelete(city)" color="accent" mat-raised-button>Delete</button>
+        <button (click)="onEdit(city)" color="accent" mat-raised-button>Edit</button>
       </mat-card-actions>
     </mat-card>
   </mat-list>
-
- 
-
 </div>
