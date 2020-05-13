@@ -4,9 +4,24 @@
       City Explorer
     </span>
     <div style="position: absolute; right: 20px;">
-    <button  routerLink="/cities" routerLinkActive="active" color="accent" mat-flat-button>Cities</button>
-  </div>
+      <button
+        routerLink="/"
+        routerLinkActive="active"
+        color="accent"
+        mat-button
+      >
+        Home
+      </button>
+      <button
+      style="margin-left: 5px;"
+        routerLink="/cities"
+        routerLinkActive="active"
+        color="accent"
+        mat-flat-button
+      >
+        Cities
+      </button>
+    </div>
   </mat-toolbar>
- 
 </div>
 <router-outlet></router-outlet>

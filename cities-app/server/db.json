@@ -43,6 +43,10 @@
     {
       "id": 11,
       "name": "Miami"
+    },
+    {
+      "name": "Charlotte",
+      "id": 12
     }
   ]
 }

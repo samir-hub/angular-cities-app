@@ -27,4 +27,8 @@ export class cityService {
   deleteCity(id: number): Observable<any> {
     return this.httpclient.delete(`http://localhost:3000/cities/${id}`)
   }
+
+  editCity(id: number, city: {}): Observable<any> {
+    return this.httpclient.put(`http://localhost:3000/cities/${id}`, city)
+  }
 }
